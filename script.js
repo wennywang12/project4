@@ -13,8 +13,8 @@ divs.forEach((value) => {
             flag = false;
             arr.push(this.children[0].getAttribute("index"));
         } else {
-            this.style.background = '#fff';
-            this.style.borderColor = '#333';
+            this.style.background = 'transparent';
+            // this.style.borderColor = '#333';
             flag = true;
             arr.splice(arr.indexOf(this.children[0].getAttribute("index")),1);
         }

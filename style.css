@@ -1,121 +1,140 @@
+/* @font-face {
+  font-family: Revalia;
+  src: url(./font/Revalia.ttf);
+} */
 
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
 
-@font-face { 
-    font-family: Revalia;
-    src: url(./font/Revalia.ttf);
-  }
-  
-  * {
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box; 
-  }
-  
-  ul li {
-    list-style: none;
-  }
-  
-  html,
-  body {
-    width: 100%;
-    height: 100%;
-    user-select: none; /* stop select the sunsetmode */
-    font-family: Revalia;
-  }
-  
-  button,
-  input {
-    outline: none;
-    border: none;
-  }
-  
-  a {
-    text-decoration: none;
-    color: inherit;
-  }
+ul li {
+  list-style: none;
+}
 
-  
-  .wrap {
-    width: 100%;
-    height: 100%;
-    padding: 50px;
-  }
-  
-  .box1 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .box1 img {
-    width: 160px;
-    height: auto;
-  }
-  
-  .items {
-    display: flex;
-    justify-content: center;
-  }
-  
-  .items div {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 50px;
-    height: 50px;
-    border: 2px solid #333;
-    margin: 10px;
-    cursor: pointer;
-    border-radius: 10px;
-  }
-  
-  .wrap p {
-    margin: 30px;
-    font-size: 20px;
-    font-weight: bold;
-  }
-  
-  .items span {
-    display: block;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-  }
-  
-  .red span {
-    background-color: #fe0000;
-  }
+html,
+body {
+  width: 100%;
+  height: 100%;
+  user-select: none; /* stop select the sunsetmode */
+  font-family: Revalia;
+}
 
-  .green span{
-    background-color: #01ff00;
-  }
+button,
+input {
+  outline: none;
+  border: none;
+}
 
-  .blue span{
-    background-color: #1f00fe;
-  }
+a {
+  text-decoration: none;
+  color: inherit;
+}
 
-  .pink span{
-    background-color: #ff00c6;
-  }
+.wrap {
+  width: 100%;
+  height: 100%;
+  padding: 50px;
+  background: radial-gradient(
+    at center,
+    red 0%,
+    red 5%,
+    #fedc00 90%,
+    #fedc00 100%
+  );
+  overflow: hidden;
+}
 
-  .orange span{
-    background-color: #ff9503;
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
   }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
 
-  .lightblue span{
-    background-color: #01f5ff;
-  }
-  
-  
-  .start {
-    cursor: pointer;
-    margin-top: 30px;
-    padding: 10px 30px;
-    box-shadow: 0px 0px 2px #000;
-    border-radius: 20px;
-    transition: 0.3s;
-  }
-  
-  .start:hover {
-    box-shadow: 0px 0px 6px #000;
-  }
+.box1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.img1 {
+  width: 300px;
+  z-index: 10;
+}
+
+.img2 {
+  position: absolute;
+  width: 1122px;
+  z-index: 10;
+  top: -116px;
+}
+
+.items {
+  position: absolute;
+  top: 260px;
+  display: flex;
+  justify-content: center;
+  -webkit-perspective: 10;
+  z-index: 1;
+}
+
+.items div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 8px;
+  height: 50px;
+  cursor: pointer;
+  transform: rotateX(35deg);
+}
+
+.items span {
+  display: block;
+  width: 5px;
+  height: 40px;
+}
+
+.red span{
+  background-color: #fe0000;
+}
+
+.green span{
+  background-color: #01ff00;
+}
+
+.blue span{
+  background-color: #1f00fe;
+}
+
+.pink span{
+  background-color: #ff00c6;
+}
+
+.orange span{
+  background-color: #ff9503;
+}
+
+.lightblue span{
+  background-color: #01f5ff;
+}
+
+.start {
+  cursor: pointer;
+  padding: 10px 30px;
+  z-index: 2000;
+  border-radius: 20px;
+  transition: 0.3s;
+  color: white;
+  font-size: 36px;
+}
+
+.start:hover {
+  transform: scale(1.2);
+}
