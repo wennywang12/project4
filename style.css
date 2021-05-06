@@ -138,3 +138,38 @@ a {
 .start:hover {
   transform: scale(1.2);
 }
+
+
+@media only screen and (max-width: 736px) {
+  .img1 {
+    width: 248px;
+  }
+
+ .img2{
+  width: 398px;
+  top: 57px;
+ }
+
+ .n{
+   bottom: 35px;
+   right: 11px;
+ }
+
+ .icon2{
+   left:20px;
+ }
+
+ .icon1{
+   width:33px;
+ }
+
+ h2{
+   font-size: 1rem;
+ }
+ 
+.cricle{
+  width: 400px;
+  height: 400px;
+}
+
+  }
